@@ -1,198 +1,368 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>UGAHacks</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- This first section is the header menu,
-         both normal and colapsed
-      -->
-    <div id="header" class = "header">
-      <div class = "content">
-        <hr class="header-line" id="header-line" color="#ff000d"/>
-        <h1 id="0" onClick="reply_click(this.id)">ABOUT</h1>
-        <h1 id="1" onClick="reply_click(this.id)">SCHEDULE</h1>
-        <h1 id="2" onClick="reply_click(this.id)">FAQ</h1>
-        <h1 id="3" onClick="reply_click(this.id)">PARTNERS</h1>
-      </div>
-    </div>
-    <div id="colapsed-menu-button">
-      <hr class="menu-line" width="35px" color="#D3D3D3" />
-      <hr class="menu-line" width="35px" color="#D3D3D3" />
-      <hr class="menu-line" width="35px" color="#D3D3D3" />
-    </div>
-    <div id="colapsed-menu">
-      <div id="exit-menu">X</div>
-      <h4 id="0" onClick="reply_click(this.id)">ABOUT</h4>
-      <h4 id="1" onClick="reply_click(this.id)">SCHEDULE</h4>
-      <h4 id="2" onClick="reply_click(this.id)">FAQ</h4>
-      <h4 id="3" onClick="reply_click(this.id)">PARTNERS</h4>
-    </div>
-    <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/gray.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-    <!-- This section is the content you first see
-      -->
-    <img
-      class = "table-dudes"
-      src = "img/greyscale_image2.jpg"
-    />
-    <img
-      class = "red-logo"
-      src = "svg/logo_H.svg"
-    />
-    <div class = "front-page">
-      <img
-        class = "UGA-Hacks"
-        src = "svg/logo_horizontal.svg"
-        alt = "UGA HACKS"
-        height = 75px;
-      />
-      <h2 class = "date">Feb. 9th-11th, 2018 at Thinc Studios<br>225 W Broad St, Athens, GA 30601</h2>
-      <h3 class = "killer-team">It's amazing what you can make with a team and a table.</h3>
-      <p class = "welcome">Join UGA for its 3rd annual Hackathon! This year is all about going back to the basics. Come find out what a hackathon is all about!</p>
-      <a href="https://ugahacks2018.typeform.com/to/qCJUeQ" target="_blank"><p class="register-now">REGISTER NOW</p></a>
-    </div>
-    <hr class="party-line" width="20%" color="#ff000d" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>UGAHacks</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/smooth-scroll.js"></script>
+</head>
 
-    <!-- This section is a continuation of the about page
-      -->
-    <div class="flex-content-1">
-      <img
-        class="what-is-img"
-        src="svg/whatisahack_icons.svg"
-      />
-      <div class="what-is-a-hackathon">
-        <h3 class="what-is">What exactly is a hackathon?</h3>
-        <p class="hack-description">Hackathons are all about groups of dedicated people coming together at a workspace to create something awesome. The 36 hour hackathon is free and open to anyone.</p>
-        <hr class="grey-line" width="20%" color="#D3D3D3"/>
-        <p class="hack-description-2">It includes mentors, free food, video game competitions, social mixers and more. There's even mixers at the event for anyone that still needs to find some teammates!</p>
-      </div>
-    </div>
-    <div class="flex-content-2">
-      <div class="what-make-hackathon">
-        <h3 class="what-make">What do you make at a hackathon?</h3>
-        <p class="make-1">Hackathon creations usually revolve around technology. Hardware, programs, games, and apps are great choices, but these are only a few examples.</p>
-        <p class="make-2">At a hackathon, you can make anything you want. From projectors created out of trash, to exciting new apps, to wacky inventions... the possibilities are endless!</p>
-        <hr class="grey-line-2" width="20%" color="#D3D3D3"/>
-      </div>
-      <img
-        class="make-img"
-        src="svg/whatdoyoumake_icons.svg"
-      />
-    </div>
+<body>
+	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
+	 href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=gray"
+	 target="_blank">
+		<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/gray.svg" alt="Major League Hacking 2017 Hackathon Season"
+		 style="width:100%">
+	</a>
 
-    <div id=schedule-scroll></div>
-    <div class=timeline-container>
-      <h3 class="timeline-title">HACKS TIMELINE</h3>
-      <div class="timeline">
-        <h3 class="months">NOV</h3>
-        <h3 class="months">JAN</h3>
-        <h3 class="months">FEB</h3>
-      </div>
-      <div class="timeline2">
-        <hr class="timeline-line" color="#ff000d"/>
-        <h3 class="day">30</h3>
-        <hr class="timeline-line" color="#ff000d"/>
-        <h3 class="day">26</h3>
-        <hr class="timeline-line" color="#ff000d"/>
-        <h3 class="day">09</h3>
-        <hr class="timeline-line" color="#ff000d"/>
-      </div>
-      <div class="timeline-info">
-        <h3 class="info">Registration Opens</h3>
-        <h3 class="info">Registration Closes</h3>
-        <h3 class="info">Hackathon Begins</h3>
-      </div>
-    </div>
-    <!-- This section is for a schedule
-      <hr class="timeline-line-1" color="#ff000d"/>
-      <hr class="timeline-line-2" color="#ff000d"/>
-      <hr class="timeline-line-3" color="#ff000d"/>
-      <hr class="timeline-line-4" color="#ff000d"/>
-      <hr class="timeline-line-5" color="#ff000d"/>
-    -->
-    <br>
-    <p class="TBA">Full hackathon schedule to be announced.</p>
-    <!--
-    <h3 id="schedule-title" class="title">HACKS SCHEDULE</h3>
+	<div id="navbar">
+		<a href="#home">
+			<h3>ABOUT</h3>
+		</a>
+		<a href="#schedule">
+			<h3>SCHEDULE</h3>
+		</a>
+		<a href="#faq">
+			<h3>FAQ</h3>
+		</a>
+		<a href="#partners">
+			<h3>PARTNERS</h3>
+		</a>
+	</div>
 
-    <table class="table-header">
-      <tr><th>Friday</th><th>Saturday</th><th>Sunday</th></tr>
-    </table>
-    <table>
-      <tr><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td></tr>
-      <tr><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td></tr>
-      <tr><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td></tr>
-      <tr><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td></tr>
-      <tr><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td><td class="time">00 AM</td><td>Lorem ipsum lorem</td></tr>
-    </table>-->
-    <div class="FAQ-header" id="FAQ-header">
-      <hr class="FAQ-line" color="#ff000d"/>
-      <img
-        class="question-mark"
-        src="svg/question-mark.svg"
-      />
-      <hr class="FAQ-line" color="#ff000d"/>
-    </div>
-    <!--This is the FAQ-->
-    <h3 class="question">Who is eligible to join?</h3>
-    <p class="answer">All students! We welcome all undergraduates and graduate students to attend. Professionals and other guests are welcome to attend as mentors or volunteers.</p>
-    <h3 class="question">How much does this event cost me?</h3>
-    <p class="answer">Nothing! The entire event and its amazing perks are free for all participants.</p>
-    <h3 class="question">Where is the event going to be?</h3>
-    <p class="answer">UGAHacks will be hosted at UGA's very own student innovation center, <a href="https://thinc.uga.edu/" target="_blank">Thinc Studios</a>, at 225 W Broad St, Athens, GA 30601. Free parking is available nearby starting at 5PM. For more info, check UGA's parking guide <a href="http://www.parking.uga.edu/maps/TimeZones.pdf" target="_blank">here</a>.</p>
-    <h3 class="question">I want to volunteer/become a mentor!</h3>
-    <p class="answer">Great! We love your excitement! Volunteers can apply <a href="https://ugahacks2018.typeform.com/to/hh4Yky" target="_blank">with this form here!</a> Mentors, we'd love it if you could reach out to us at <a href="mailto:hello@ugahacks.com" target="_blank">hello@ugahacks.com</a>!</p>
-    
+	<section id="home" class="page">
+		<div class="subcontainer homecontainer">
+			<img src="svg/logo_horizontal.svg" alt="UGAHacks 3" />
+			<h1>
+				Feb. 9th-11th, 2018 at Thinc Studios
+				<br> 225 W Broad St, Athens, GA 30601
+			</h1>
+			<h2 style="min-width: 100%;">
+				It's amazing what you can make with a team and a table.
+			</h2>
+			<p style="padding-bottom: 80px;">
+				Join UGA for its 3rd annual Hackathon!
+				<br> This year is all about going back to the basics. Come find out what a hackathon is all about!
+			</p>
+			<a class="button" href="https://ugahacks2018.typeform.com/to/qCJUeQ">REGISTER NOW</a>
+		</div>
+		<img class="svg" src="svg/logo_H.svg" style="width: 7%; left: 21.5%; top: calc(100vw * .23); position: absolute;" alt="" />
+		<svg height="6" width="200" style="position: absolute; right: 0; top: 275px;">
+			<line class="hide" x1="0" y1="0" x2="200" y2="0" style="stroke:rgb(255,0,0); stroke-width:6; " />
+		</svg>
+	</section>
 
-    <div class="more-FAQ" id="more-FAQ">
-      <h3 class="question">What should I bring?</h3>
-      <p class="answer">Laptops, phones, chargers, and other tools you might need for your project. If you're staying overnight, bring the necessary toiletries, and possibly a sleeping bag. Additionally, please bring your official student ID or government ID (no photocopies allowed).</p>
-      <h3 class="question">Can I start working on my project before the event?</h3>
-      <p class="answer">No. All UGAHacks projects must begin at the hackathon. You are not permitted to begin a hackathon project before this event.</p>
-      <h3 class="question">What if I don't have a team or idea?</h3>
-      <p class="answer">Don't sweat it! You're free to join any existing team or form a new one when you get there. We'll also provide ample opportunities for hackers to meet each other and brainstorm some amazing ideas.</p>
-      <h3 class="question">How many people can I have on my team?</h3>
-      <p class="answer">There's no hard limit but we recommend teams be at most 4 people.</p>
-      <h3 class="question">What are the prizes and how can I win them?</h3>
-      <p class="answer">Prizes will be a surprise! :) And you can win them by participating in sponsored challenges - which will be announced at the hackathon - or by winning the judges' interest in your project.</p>
-      <h3 class="question">Will I have to bring food?</h3>
-      <p class="answer">You can if you want, but we'll have food readily available for hackers all weekend. The venue is right in Downtown Athens too, so there's some great places to eat nearby as well! Please note that if you require any specific diets, we are not able to guarantee those accommodations.</p>
-      <h3 class="question">Where can I sleep?</h3>
-      <p class="answer">We'll have designated sleeping areas for hackers, but they will be on a first come first serve basis. You will not allowed to reserve or save a space. You're welcome and even encouraged to bring a sleeping bag!</p>
-      <h3 class="question">Do you offer travel reimbursements?</h3>
-      <p class="answer">Please state that you are seeking a travel reimbursement on your application. Travel reimbursement will be issued on a case by case basis.</p>
-      <h3 class="question">Can high schoolers participate?</h3>
-      <p class="answer">We welcome all high schoolers who are interested. Please email us at <a href="mailto:hello@ugahacks.com" target="_blank">hello@ugahacks.com</a> for further information.</p>
-      <h3 class="question">What's the Code of Conduct?</h3>
-      <p class="answer">You can find out more by visiting the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct page</a>.</p>
-      <h3 class="question">I have more questions!</h3>
-      <p class="answer">We'd love to answer them. Feel free to drop us an email at <a href="mailto:hello@ugahacks.com" target="_blank">hello@ugahacks.com</a>.</p>
-    </div>
-    <div class="see-more">
-      <hr class="see-more-line" color="#ff000d"/>
-      <p class="expand" id="expand">SEE MORE</p>
-      <hr class="see-more-line" color="#ff000d"/>
-    </div>
+	<section id="about" class="page">
+		<div class="container">
+			<div class="subcontainer hide">
+				<img src="svg/whatisahack_icons.svg" style="position: relative; max-width: 500px; top: 35%;" alt="">
+			</div>
+			<div class="subcontainer">
+				<div class="card-head">
+					<h2 style="min-width: 40%;">
+						What exactly is
+						<br> a hackathon?
+					</h2>
+					<hr/>
+				</div>
+				<p style="text-align: justify;">
+					Hackathons are all about groups of dedicated people coming together at a workspace to create something awesome. The 36 hour
+					hackathon is free and open to anyone.
+					<br>
+					<br> It includes mentors, free food, video game competitions, social mixers and more. There's even mixers at the event for
+					anyone that still needs to find some teammates!
+				</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="subcontainer">
+				<div class="card-head">
+					<h2>
+						What do you make at a hackathon?
+					</h2>
+					<hr/>
+				</div>
+				<p style="text-align: justify;">
+					Hackathon creations usually revolve around technology. Hardware, programs, games, and apps are great choices, but these are
+					only a few examples.
+					<br>
+					<br> At a hackathon, you can make anything you want. From projectors created out of trash, to exciting new apps, to wacky
+					inventions... the possibilities are endless!
+				</p>
+			</div>
+			<div class="subcontainer hide">
+				<img src="svg/whatdoyoumake_icons.svg" style="position: relative; max-width: 300px;" alt="">
+			</div>
+		</div>
+	</section>
 
-    <div>
-    <h3 class="title" id="partners">PARTNERS</h3>
+	<section id="schedule" class="page">
+		<h4 style="padding-top: 30px;">HACKS TIMELINE</h4>
+		<div id="timeline">
+			<hr class="timeline-line" />
+			<div class="timeline-box">
+				<h4>NOV</h4>
+				<h5>30</h5>
+				<h6>
+					Registration Opens
+				</h6>
+			</div>
+			<hr class="timeline-line" />
+			<div class="timeline-box">
+				<h4>JAN</h4>
+				<h5>26</h5>
+				<h6>
+					Registration Closes
+				</h6>
+			</div>
+			<hr class="timeline-line" />
+			<div class="timeline-box">
+				<h4>FEB</h4>
+				<h5>09</h5>
+				<h6>
+					Hackathon Begins
+				</h6>
+			</div>
+			<hr class="timeline-line" />
+		</div>
+		<p style="text-align: center;">
+			Full hackathon schedule to be announced!
+		</p>
+	</section>
 
-    <div class="sponsor-flex">
-      <img
-        class="sponsor-image"
-        src="img/hacks-sponsor.jpg"
-      />
-      <div class="sponsor-description">
-        <h3 class="sponsor-title">Interested in sponsoring UGAHacks?</h3>
-        <p class="sponsor-info">By sponsoring UGAHacks, your company can have an opportunity to inspire new programmers while also reaching out to and recruiting the rising stars of the tech world. Please reach out to our sponsor chair for more information.</p>
-        <a href="docs/sponsorship_package.pdf" target="_blank"><h3>Sponsor Packet PDF</h3></a>
-        <h3 class="sponsor-email"><a href="mailto:sponsor@ugahacks.com" target="_blank">sponsor@ugahacks.com</a></h3>
-      </div>
-    </div>
-    <div class = footer>Contact us at <a href="mailto:hello@ugahacks.com" target="_blank">hello@ugahacks.com</a></div>
-    <script src="js/UGAhacksScript2.js"></script>
-  </body>
+	<section id="faq" class="page">
+		<div class="faq-block">
+			<hr class="timeline-line" style="flex: auto;"/>
+			<img src="svg/question-mark.svg" alt="?" style="padding: 0 30px; height: 90px;" />
+			<hr class="timeline-line" style="flex: auto;"/>
+		</div>
+		<div class="faq">
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>
+						Who is eligible
+						<br> to join?
+					</h2>
+					<hr/>
+				</div>
+				<p>
+					All students! We welcome all undergraduates and graduate students to attend. Professionals and other guests are welcome to
+					attend as mentors or volunteers.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>
+						How much will the
+						<br> event cost me?
+					</h2>
+					<hr/>
+				</div>
+				<p>
+					Nothing! The entire event and its amazing perks are free for all participants, including meals and snacks to keep you powered
+					throughout the weekend.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>
+						Where is the event
+						<br> going to be?
+					</h2>
+					<hr/>
+				</div>
+				<p>
+					UGAHacks will be hosted at UGA's very own
+					<a href="https://thinc.uga.edu/" target="_blank">Thinc Studios</a>, at 225 W Broad St, Athens, GA 30601. Free parking is available nearby starting at 5PM. For more info,
+					check UGA's parking guide
+					<a href="http://www.parking.uga.edu/maps/TimeZones.pdf" target="_blank">here</a>.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2 style="min-width: 100%;">
+						I want to volunteer/become a mentor!
+					</h2>
+					<hr/>
+				</div>
+				<p>
+					Great! We love your excitement! Volunteers can apply
+					<a href="https://ugahacks2018.typeform.com/to/hh4Yky">with this form here!</a> Mentors, we'd love it if you could reach out to us at
+					<a href="mailto:hello@ugahacks.com" target="_blank">hello@ugahacks.com</a>!
+				</p>
+			</div>
+		</div>
+		<div class="faq" id="more-faq">
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>What should I bring?</h2>
+					<hr/>
+				</div>
+				<p>
+					Laptops, phones, chargers, and other tools you might need for your project. If you're staying overnight, bring the necessary
+					toiletries, and possibly a sleeping bag. Additionally, please bring your official student ID or government ID (no photocopies
+					allowed).
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>Can I start working on my project before the event?</h2>
+					<hr/>
+				</div>
+				<p>
+					No. All UGAHacks projects must begin at the hackathon. You are not permitted to begin a hackathon project before this event.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>What if I don't have a team or idea?</h2>
+					<hr/>
+				</div>
+				<p>
+					Don't sweat it! You're free to join any existing team or form a new one when you get there. We'll also provide ample opportunities
+					for hackers to meet each other and brainstorm some amazing ideas.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>How many people can I have on my team?</h2>
+					<hr/>
+				</div>
+				<p>
+					There's no hard limit but we recommend teams be at most 4 people.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>What are the prizes and how can I win them?</h2>
+					<hr/>
+				</div>
+				<p>
+					Prizes will be a surprise! :) And you can win them by participating in sponsored challenges (which will be announced at the
+					hackathon) or by winning the judges' interest in your project.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>Will I have to bring food?</h2>
+					<hr/>
+				</div>
+				<p>
+					You can if you want, but we'll have food readily available for hackers all weekend. The venue is right in Downtown Athens
+					too, so there's some great places to eat nearby as well! Please note that if you require any specific diets, we are
+					not able to guarantee those accommodations.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>Where will I sleep?</h2>
+					<hr/>
+				</div>
+				<p>
+					We'll have designated sleeping areas for hackers, but they will be on a first-come-first-serve basis. You're welcome and
+					even encouraged to bring a sleeping bag!
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2 style="width: 50%;">Do you offer travel reimbursements?</h2>
+					<hr/>
+				</div>
+				<p>
+					Please state that you are seeking a travel reimbursement on your application. Travel reimbursement will be issued on a case
+					by case basis.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>Can high schoolers participate?</h2>
+					<hr/>
+				</div>
+				<p>
+					We welcome all high schoolers who are interested. Please email us at
+					<a href="mailto:hello@ugahacks.com" target="_blank">hello@ugahacks.com</a> for further information.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>What's the Code of Conduct?</h2>
+					<hr/>
+				</div>
+				<p>
+					You can find out more by visiting the
+					<a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct page</a>.
+				</p>
+			</div>
+			<div class="faqcontainer">
+				<div class="card-head">
+					<h2>I have more questions!</h2>
+					<hr/>
+				</div>
+				<p>
+					We'd love to answer them. Feel free to drop us an email at
+					<a href="mailto:hello@ugahacks.com" target="_blank">hello@ugahacks.com</a>.
+				</p>
+			</div>
+		</div>
+		<div class="faq-block">
+			<hr class="timeline-line" style="flex: auto; margin: auto 0;"/>
+			<p id="expand" style="width: 150px; text-align: center;">SEE MORE</p>
+			<hr class="timeline-line" style="flex: auto; margin: auto 0;"/>
+		</div>
+	</section>
+
+	<section id="partners" class="page">
+		<h4 style="padding-bottom: 50px;">PARTNERS</h4>
+		<div id="partner-container">
+			<img src="img/facebook.png" alt="Facebook" />
+			<img src="img/homedepot.png" alt="The Home Depot" />
+			<img src="img/aspirent.png" alt="Aspirent" />
+			<img src="img/innovation.png" alt="Innovation Gateway" />
+		</div>
+		<div id="partner-container-2">
+			<img class="hide" src="img/hacks-sponsor.jpg" style="float: left; max-height: 350px; padding-right: 50px;" alt="" />
+			<div style="text-align: justify;">
+				<h6>
+					Interested in
+					<br> sponsoring us?
+				</h6>
+				<p>
+					By sponsoring UGAHacks, your company can have an opportunity to inspire new programmers while also reaching out to and recruiting
+					the rising stars of the tech world. Please reach out to our sponsor chair for more information.
+				</p>
+				<a href="docs/sponsorship_package.pdf" target="_blank">
+					<h6>Sponsor Packet PDF</h6>
+				</a>
+				<a href="mailto:sponsor@ugahacks.com" target="_blank">
+					<h6>sponsor@ugahacks.com</h6>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="page" id="footer">
+		<a href="mailto:hello@ugahacks.com" target="_blank">
+			<i class="fas fa-envelope-square"></i>
+		</a>
+		<a href="https://www.facebook.com/events/1727441500601479/">
+			<i class="fab fa-facebook" href=""></i>
+		</a>
+		<a href="https://twitter.com/UGAHacks">
+			<i class="fab fa-twitter-square"></i>
+		</a>
+	</section>
+	
+	<script>
+		var scroll = new SmoothScroll('a[href*="#"]');
+	</script>
+	<script src="js/script.js"></script>
+
+
+</body>
+
 </html>

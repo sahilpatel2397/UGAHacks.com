@@ -47,7 +47,7 @@ h2 {
 	flex: initial;
 	max-width: 50%;
 	min-width: 270px;
-	font-size: 24px;
+	font-size: 22px;
 	text-align: left;
 	letter-spacing: 2px;
 }
@@ -130,7 +130,7 @@ hr {
 }
 
 .subcontainer {
-	padding: 50px 40px;
+	padding: 50px 60px;
 	display: inline-block;
 	margin: 0 auto;
 	width: 50%;
@@ -226,7 +226,7 @@ hr {
 }
 
 #faq {
-	padding: 50px 0;
+	padding: 150px 0;
 	width: 70%;
 	margin: 0 auto;
 }

@@ -180,42 +180,6 @@ hr {
 	width: 460px;
 }
 
-/*Added by Mark for schedule*/
-.schedule {
-	text-align: left;
-	margin: auto;
-	font-size: 18px;
-	letter-spacing: 1px;
-	width: 450px;
-}
-
-.schedule-day {
-	font-size: 25px;
-	letter-spacing: 5px;
-	padding: 10px;
-	padding-left: 0px;
-	padding-top: 30px;
-	text-align: center;
-	font-weight: 600;
-}
-
-.time {
-	font-weight: 600;
-	padding-top: 10px;
-}
-
-.time2 {
-	font-weight: 600;
-	padding-top: 10px;
-	padding-left: 10px;
-}
-
-.event {
-	padding-left: 30px;
-	padding-top: 10px;
-	width: 375px;
-}
-
 #navbar {
 	z-index: 2;
 	width: 100%;
@@ -439,4 +403,40 @@ hr {
 		width: 90%;
 		text-align: left;
 	}
+}
+
+/*Added by Mark for schedule*/
+.schedule {
+	text-align: left;
+	margin: auto;
+	font-size: 18px;
+	letter-spacing: 1px;
+	width: 450px;
+}
+
+.schedule-day {
+	font-size: 25px;
+	letter-spacing: 5px;
+	padding: 10px;
+	padding-left: 0px;
+	padding-top: 30px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.time {
+	font-weight: 600;
+	padding-top: 10px;
+}
+
+.time2 {
+	font-weight: 600;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.event {
+	padding-left: 30px;
+	padding-top: 10px;
+	width: 375px;
 }
